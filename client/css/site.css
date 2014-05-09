@@ -1,0 +1,130 @@
+nav.nav {
+    margin-bottom: 20px;
+}
+
+.aa-aircraft-info h4 {
+    color: #555;
+    
+    font-size: 21px;
+    font-weight: normal;
+    white-space: nowrap;
+    
+    margin: 0 0 15px; 0;
+}
+
+.aa-aircraft-info small {
+    font-size: 12px;
+    text-transform: uppercase;
+    
+    margin: 0 0 3px 0;
+}
+
+.aa-aircraft-info input[type="text"] {
+    margin: 0 0 20px 0;
+}
+
+.aa-heading-info {
+    color: #31708f;
+    background-color: #d9edf7;
+    border: 1px solid #bce8f1;
+    
+    font-weight: normal;  
+    
+    margin: 0 15px 20px 15px;
+    padding: 5px;
+    position: relative;
+}
+
+.aa-heading-info::before {
+    content: '';
+    
+    height: 0;
+    width: 0;
+    
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #d9edf7;
+    
+    position: absolute;
+    z-index: 1;
+    bottom: -12px;
+    right: 12px;
+}
+
+.aa-heading-info::after {
+    content: '';
+    
+    height: 0;
+    width: 0;
+    
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 14px solid #bce8f1;
+    
+    position: absolute;
+    bottom: -14px;
+    right: 10px;
+}
+
+/*
+.aa-dashboard-acrouting .col-md-6:first-of-type {
+    padding-left: 0;
+}
+
+.aa-dashboard-acrouting .col-md-6:last-of-type {
+    padding-right: 0;
+}
+
+.aa-flight-box {
+    background: #fefefe;
+    border: 1px solid #ddd;
+    
+    margin: 20px 0;
+    padding: 20px;
+}
+*/
+
+.aa-flight-box h1 {
+    border-bottom: 1px solid #ddd;
+    
+    margin: 0 0 5px 0;
+    padding: 0 0 5px 0;
+}
+
+.aa-flight-box h1,
+.aa-flight-box h1 small {
+    font-weight: 200;
+}
+
+.aa-flight-box h1 small {
+    font-size: 50%;
+}
+
+.aa-flight-box h1 > span {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.aa-flight-box table {
+    margin-bottom: 0;
+}
+
+.aa-flight-box table > thead > tr > th,
+.aa-flight-box table > tbody > tr > td {
+    border-width: 0;
+    padding: 0;
+}
+
+.aa-flight-box table > thead > tr > th {
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.aa-flight-box table > tbody > tr > td {
+    font-size: 24px;
+}
+
+.aa-dashboard-acrouting .aa-flight-box {
+    margin-top: 0;
+}

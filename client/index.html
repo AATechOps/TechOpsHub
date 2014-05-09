@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>AA TechOps Hub</title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./css/site.css" />
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <nav class="nav navbar-default">
+            <div class="container">
+                <p class="navbar-text navbar-left hidden-xs">Find Aircraft:</p>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Nose #">
+                    </div>
+                    <button type="submit" class="btn btn-default hidden-xs">Find</button>
+                </form>
+                
+                <p class="navbar-text navbar-right hidden-xs">LCC\Username</p>
+            </div>
+        </nav>
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 visible-lg">
+                    <h4 class="aa-heading-info">My Tasks</h4>
+                </div>
+                <div class="col-xs-12 col-lg-6">
+                    <div class="row aa-aircraft-info">
+                        <div class="col-xs-4 col-sm-2">
+                            <small class="text-muted">Aircraft</small>
+                            <h4>191</h4>
+                        </div>
+
+                        <div class="col-xs-4 col-sm-2">
+                            <small class="text-muted">Registration</small>
+                            <h4>NS191W</h4>
+                        </div>
+
+                        <div class="col-xs-4 col-sm-2 hidden-xs">
+                            <small class="text-muted">Equipment</small>
+                            <h4>A321-300</h4>
+                        </div>
+
+                        <div class="col-xs-4 col-sm-2 hidden-xs">
+                            <small class="text-muted">Fleet</small>
+                            <h4>A321</h4>
+                        </div>
+
+                        <div class="col-xs-4 col-sm-2">
+                            <small class="text-muted">Engine</small>
+                            <h4>CFM56-5</h4>
+                        </div>
+
+                        <div class="col-xs-4 col-sm-2 hidden-xs">
+                            <small class="text-muted">Carrier</small>
+                            <h4>US</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="row aa-dashboard-acrouting">
+                        <h4 class="aa-heading-info">Aircraft Routing</h4>
+                        
+                        <div class="col-sm-6">
+                            <div class="panel panel-default">
+                                <div class="aa-flight-box panel-body">
+                                    <h1>
+                                        <small class="text-muted visible-xs">AA Flight 1234</small>
+                                        <span>
+                                            <span>LAX</span> &rarr; <span>PHX</span>
+                                        </span>
+                                        <small class="text-muted">Arrives PHX &mdash; Jan 01, 2000</small>
+                                    </h1>
+
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="col-sm-2 text-muted hidden-xs">Flight</th>
+                                                <th class="col-sm-6 text-muted">Scheduled 00:00</th>
+                                                <th class="col-sm-2 text-muted">Status</th>
+                                                <th class="col-sm-2 text-muted">Gate</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-muted hidden-xs">1234</td>
+                                                <td>00:00</td>
+                                                <td class="text-muted">-</td>
+                                                <td class="text-muted">A2</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6">
+                            <div class="panel panel-default">
+                                <div class="aa-flight-box panel-body">
+                                    <h1>
+                                        <small class="text-muted visible-xs">AA Flight 1234</small>
+                                        <span>
+                                            <span>PHX</span> &rarr; <span>DFW</span>
+                                        </span>
+                                        <small class="text-muted">Departs PHX &mdash; Jan 01, 2000</small>
+                                    </h1>
+
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="col-sm-2 text-muted hidden-xs">Flight</th>
+                                                <th class="col-sm-6 text-muted">Scheduled 00:00</th>
+                                                <th class="col-sm-2 text-muted">Status</th>
+                                                <th class="col-sm-2 text-muted">Gate</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-muted hidden-xs">1234</td>
+                                                <td>00:00</td>
+                                                <td class="text-muted">-</td>
+                                                <td class="text-muted">A2</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <h4 class="aa-heading-info">Open Log Pages</h4>
+                        <h4 class="aa-heading-info">MELs</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 visible-lg">
+                    <h4 class="aa-heading-info">Chat</h4>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
