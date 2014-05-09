@@ -66,23 +66,9 @@ nav.nav {
     right: 10px;
 }
 
-/*
-.aa-dashboard-acrouting .col-md-6:first-of-type {
-    padding-left: 0;
-}
-
-.aa-dashboard-acrouting .col-md-6:last-of-type {
-    padding-right: 0;
-}
-
 .aa-flight-box {
     background: #fefefe;
-    border: 1px solid #ddd;
-    
-    margin: 20px 0;
-    padding: 20px;
 }
-*/
 
 .aa-flight-box h1 {
     border-bottom: 1px solid #ddd;
@@ -127,4 +113,48 @@ nav.nav {
 
 .aa-dashboard-acrouting .aa-flight-box {
     margin-top: 0;
+}
+
+.nav-dashboard-history li > a {
+    line-height: 1;
+    vertical-align: bottom;   
+    
+    margin-bottom: 15px;
+    padding: 5px;
+    
+    position: relative;
+    box-sizing: padding-box;
+    height: 60px;
+    width: 60px;  
+}
+
+.nav-dashboard-history li > a.active::after {
+    content: '';
+    
+    border-color: transparent #fff #fff transparent;
+    border-style: solid;
+    border-width: 6px;
+    
+    width: 0;
+    height: 0;
+    
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+}
+
+.nav-dashboard-history li > a > .content-bottom {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+}
+
+.nav-dashboard-history li > a > .content-bottom small {
+    font-size: 70%;
+    font-weight: bold;
+}
+
+.nav-dashboard-history li > a > small {
+    font-size: 70%;
+    font-weight: bold;
 }
