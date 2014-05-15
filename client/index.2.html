@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>AA TechOps Hub</title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./css/site.2.css" />
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <nav class="nav navbar-default block">
+            <div class="container">
+                <a href="#" class="brand navbar-left">
+                    <img src="./images/aa-logo.png" />
+                </a>
+            </div>
+        </nav>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <form class="form-inline block" role="form">
+                        <span class="input-group">
+                            <input type="text" class="form-control" placeholder="Nose #">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Find</button>
+                            </span>
+                        </span>
+                    </form>
+                    
+                    <h3>
+                        <small>Aircraft</small>
+                        <span>154</span>
+                    </h3>
+                    <h3>
+                        <small>Equipment</small>
+                        <span>A321</span>
+                    </h3>
+                    <h3>
+                        <small>Engine</small>
+                        <span>CFM56-6</span>
+                    </h3>
+                </div>
+                
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="aa-heading">
+                                <span>Aircraft Routing</span>
+                            </h4>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="panel panel-default aa-flight-card">
+                                <div class="panel-body">
+                                    <h3>
+                                        <small>Flight 1234</small>
+                                        <span>LAX</span>&nbsp;&rarr;&nbsp;<span>PHX</span>
+                                    </h3>
+                                    <div class="row">
+                                        <h5 class="col-xs-5">
+                                            <small>SCH 00:00</small>
+                                            <span>00:00</span>
+                                        </h5>
+                                        <h5 class="col-xs-3">
+                                            <small>GATE</small>
+                                            <span>A1</span>
+                                        </h5>
+                                        <h5 class="col-xs-4">
+                                            <small>GND</small>
+                                            <span>00:00</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs">
+                            <div class="panel panel-default aa-flight-card">
+                                <div class="panel-body">
+                                    <h3>
+                                        <small>Flight 1234</small>
+                                        <span>PHX</span>&nbsp;&rarr;&nbsp;<span>DFW</span>
+                                    </h3>
+                                    <div class="row">
+                                        <h5 class="col-xs-5">
+                                            <small>SCH 00:00</small>
+                                            <span>00:00</span>
+                                        </h5>
+                                        <h5 class="col-xs-3">
+                                            <small>GATE</small>
+                                            <span>A1</span>
+                                        </h5>
+                                        <h5 class="col-xs-4">
+                                            <small>GND</small>
+                                            <span>00:00</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 visible-md visible-lg">
+                            <div class="panel panel-default aa-flight-card">
+                                <div class="panel-body">
+                                    <h3>
+                                        <small>Flight 1234</small>
+                                        <span>DFW</span>&nbsp;&rarr;&nbsp;<span>BOS</span>
+                                    </h3>
+                                    <div class="row">
+                                        <h5 class="col-xs-5">
+                                            <small>SCH 00:00</small>
+                                            <span>00:00</span>
+                                        </h5>
+                                        <h5 class="col-xs-3">
+                                            <small>GATE</small>
+                                            <span>A1</span>
+                                        </h5>
+                                        <h5 class="col-xs-4">
+                                            <small>GND</small>
+                                            <span>00:00</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 visible-lg">
+                            <div class="panel panel-default aa-flight-card">
+                                <div class="panel-body">
+                                    <h3>
+                                        <small>Flight 1234</small>
+                                        <span>BOS</span>&nbsp;&rarr;&nbsp;<span>PHL</span>
+                                    </h3>
+                                    <div class="row">
+                                        <h5 class="col-xs-5">
+                                            <small>SCH 00:00</small>
+                                            <span>00:00</span>
+                                        </h5>
+                                        <h5 class="col-xs-3">
+                                            <small>GATE</small>
+                                            <span>A1</span>
+                                        </h5>
+                                        <h5 class="col-xs-4">
+                                            <small>GND</small>
+                                            <span>00:00</span>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4 class="aa-heading">
+                                <span>Discrepancies</span>
+                            </h4>
+                            
+                            <h3>
+                                <span class="label label-danger">4 MEL</span>
+                                <span class="label label-warning">3 NEF</span>
+                                <span class="label label-info">3 TFI</span>
+                            </h3>
+                            
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>ATA</th>
+                                        <th>LOG #</th>
+                                        <th class="hidden-xs">STATUS</th>
+                                        <th>CODE</th>
+                                        <th>STATION</th>
+                                        <th class="hidden-xs">DATE</th>
+                                        <th class="hidden-xs">COMMENTS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="warning">
+                                        <td>2110</td>
+                                        <td>
+                                            <a href="#">23498703</a>
+                                        </td>
+                                        <td class="hidden-xs">DEFERRED</td>
+                                        <td>NEF</td>
+                                        <td>DFW</td>
+                                        <td class="hidden-xs">14 MAR 14</td>
+                                        <td class="hidden-xs">A TRIM PIECE IS COMING OFF A WINDOW -- SEAT 14A</td>
+                                    </tr>
+                                    <tr class="danger">
+                                        <td>3410</td>
+                                        <td>
+                                            <a href="#">12345678</a>
+                                        </td>
+                                        <td class="hidden-xs">CLOSED</td>
+                                        <td>MEL</td>
+                                        <td>CLT</td>
+                                        <td class="hidden-xs">7 MAY 14</td>
+                                        <td class="hidden-xs">COFFEE POT CIRCUIT BREAKER KEEPS POPPING - 1ST CLASS GALLEY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2310</td>
+                                        <td>
+                                            <a href="#">98765123</a>
+                                        </td>
+                                        <td class="hidden-xs">DEFERRED</td>
+                                        <td>TFI</td>
+                                        <td>PHX</td>
+                                        <td class="hidden-xs">6 MAY 14</td>
+                                        <td class="hidden-xs">FOLLOW UP CK ON</td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td>2110</td>
+                                        <td>
+                                            <a href="#">23498703</a>
+                                        </td>
+                                        <td class="hidden-xs">DEFERRED</td>
+                                        <td>NEF</td>
+                                        <td>DFW</td>
+                                        <td class="hidden-xs">14 MAR 14</td>
+                                        <td class="hidden-xs">A TRIM PIECE IS COMING OFF A WINDOW -- SEAT 14A</td>
+                                    </tr>
+                                    <tr class="danger">
+                                        <td>3410</td>
+                                        <td>
+                                            <a href="#">12345678</a>
+                                        </td>
+                                        <td class="hidden-xs">CLOSED</td>
+                                        <td>MEL</td>
+                                        <td>CLT</td>
+                                        <td class="hidden-xs">7 MAY 14</td>
+                                        <td class="hidden-xs">COFFEE POT CIRCUIT BREAKER KEEPS POPPING - 1ST CLASS GALLEY</td>
+                                    </tr>
+                                    <tr class="danger">
+                                        <td>3410</td>
+                                        <td>
+                                            <a href="#">12345678</a>
+                                        </td>
+                                        <td class="hidden-xs">CLOSED</td>
+                                        <td>MEL</td>
+                                        <td>CLT</td>
+                                        <td class="hidden-xs">7 MAY 14</td>
+                                        <td class="hidden-xs">COFFEE POT CIRCUIT BREAKER KEEPS POPPING - 1ST CLASS GALLEY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2310</td>
+                                        <td>
+                                            <a href="#">98765123</a>
+                                        </td>
+                                        <td class="hidden-xs">DEFERRED</td>
+                                        <td>TFI</td>
+                                        <td>PHX</td>
+                                        <td class="hidden-xs">6 MAY 14</td>
+                                        <td class="hidden-xs">FOLLOW UP CK ON</td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td>2110</td>
+                                        <td>
+                                            <a href="#">23498703</a>
+                                        </td>
+                                        <td class="hidden-xs">DEFERRED</td>
+                                        <td>NEF</td>
+                                        <td>DFW</td>
+                                        <td class="hidden-xs">14 MAR 14</td>
+                                        <td class="hidden-xs">A TRIM PIECE IS COMING OFF A WINDOW -- SEAT 14A</td>
+                                    </tr>
+                                    <tr class="danger">
+                                        <td>3410</td>
+                                        <td>
+                                            <a href="#">12345678</a>
+                                        </td>
+                                        <td class="hidden-xs">CLOSED</td>
+                                        <td>MEL</td>
+                                        <td>CLT</td>
+                                        <td class="hidden-xs">7 MAY 14</td>
+                                        <td class="hidden-xs">COFFEE POT CIRCUIT BREAKER KEEPS POPPING - 1ST CLASS GALLEY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2310</td>
+                                        <td>
+                                            <a href="#">98765123</a>
+                                        </td>
+                                        <td class="hidden-xs">DEFERRED</td>
+                                        <td>TFI</td>
+                                        <td>PHX</td>
+                                        <td class="hidden-xs">6 MAY 14</td>
+                                        <td class="hidden-xs">FOLLOW UP CK ON</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4 class="aa-heading">History</h4>
+                            
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>ATA</th>
+                                        <th>LOG #</th>
+                                        <th class="hidden-xs">STATUS</th>
+                                        <th>CODE</th>
+                                        <th>STATION</th>
+                                        <th class="hidden-xs">DATE</th>
+                                        <th class="hidden-xs">COMMENTS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="warning">
+                                        <td>2110</td>
+                                        <td>
+                                            <a href="#">23498703</a>
+                                        </td>
+                                        <td class="hidden-xs">DEFERRED</td>
+                                        <td>NEF</td>
+                                        <td>DFW</td>
+                                        <td class="hidden-xs">14 MAR 14</td>
+                                        <td class="hidden-xs">A TRIM PIECE IS COMING OFF A WINDOW -- SEAT 14A</td>
+                                    </tr>
+                                    <tr class="danger">
+                                        <td>3410</td>
+                                        <td>
+                                            <a href="#">12345678</a>
+                                        </td>
+                                        <td class="hidden-xs">CLOSED</td>
+                                        <td>MEL</td>
+                                        <td>CLT</td>
+                                        <td class="hidden-xs">7 MAY 14</td>
+                                        <td class="hidden-xs">COFFEE POT CIRCUIT BREAKER KEEPS POPPING - 1ST CLASS GALLEY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2310</td>
+                                        <td>
+                                            <a href="#">98765123</a>
+                                        </td>
+                                        <td class="hidden-xs">DEFERRED</td>
+                                        <td>TFI</td>
+                                        <td>PHX</td>
+                                        <td class="hidden-xs">6 MAY 14</td>
+                                        <td class="hidden-xs">FOLLOW UP CK ON</td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td>2110</td>
+                                        <td>
+                                            <a href="#">23498703</a>
+                                        </td>
+                                        <td class="hidden-xs">DEFERRED</td>
+                                        <td>NEF</td>
+                                        <td>DFW</td>
+                                        <td class="hidden-xs">14 MAR 14</td>
+                                        <td class="hidden-xs">A TRIM PIECE IS COMING OFF A WINDOW -- SEAT 14A</td>
+                                    </tr>
+                                    <tr class="danger">
+                                        <td>3410</td>
+                                        <td>
+                                            <a href="#">12345678</a>
+                                        </td>
+                                        <td class="hidden-xs">CLOSED</td>
+                                        <td>MEL</td>
+                                        <td>CLT</td>
+                                        <td class="hidden-xs">7 MAY 14</td>
+                                        <td class="hidden-xs">COFFEE POT CIRCUIT BREAKER KEEPS POPPING - 1ST CLASS GALLEY</td>
+                                    </tr>
+                                    <tr class="danger">
+                                        <td>3410</td>
+                                        <td>
+                                            <a href="#">12345678</a>
+                                        </td>
+                                        <td class="hidden-xs">CLOSED</td>
+                                        <td>MEL</td>
+                                        <td>CLT</td>
+                                        <td class="hidden-xs">7 MAY 14</td>
+                                        <td class="hidden-xs">COFFEE POT CIRCUIT BREAKER KEEPS POPPING - 1ST CLASS GALLEY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2310</td>
+                                        <td>
+                                            <a href="#">98765123</a>
+                                        </td>
+                                        <td class="hidden-xs">DEFERRED</td>
+                                        <td>TFI</td>
+                                        <td>PHX</td>
+                                        <td class="hidden-xs">6 MAY 14</td>
+                                        <td class="hidden-xs">FOLLOW UP CK ON</td>
+                                    </tr>
+                                    <tr class="warning">
+                                        <td>2110</td>
+                                        <td>
+                                            <a href="#">23498703</a>
+                                        </td>
+                                        <td class="hidden-xs">DEFERRED</td>
+                                        <td>NEF</td>
+                                        <td>DFW</td>
+                                        <td class="hidden-xs">14 MAR 14</td>
+                                        <td class="hidden-xs">A TRIM PIECE IS COMING OFF A WINDOW -- SEAT 14A</td>
+                                    </tr>
+                                    <tr class="danger">
+                                        <td>3410</td>
+                                        <td>
+                                            <a href="#">12345678</a>
+                                        </td>
+                                        <td class="hidden-xs">CLOSED</td>
+                                        <td>MEL</td>
+                                        <td>CLT</td>
+                                        <td class="hidden-xs">7 MAY 14</td>
+                                        <td class="hidden-xs">COFFEE POT CIRCUIT BREAKER KEEPS POPPING - 1ST CLASS GALLEY</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2310</td>
+                                        <td>
+                                            <a href="#">98765123</a>
+                                        </td>
+                                        <td class="hidden-xs">DEFERRED</td>
+                                        <td>TFI</td>
+                                        <td>PHX</td>
+                                        <td class="hidden-xs">6 MAY 14</td>
+                                        <td class="hidden-xs">FOLLOW UP CK ON</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h4 class="aa-heading">Manuals</h4>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <h4 class="aa-heading">Engine Manuals</h4>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <h4 class="aa-heading">Other Manuals</h4>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4 class="aa-heading">Interior Drawings</h4>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <h4 class="aa-heading">Exterior Drawings</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

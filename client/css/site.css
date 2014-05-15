@@ -2,6 +2,11 @@ nav.nav {
     margin-bottom: 20px;
 }
 
+.brand img
+{
+    max-height: 50px;
+}
+
 .aa-aircraft-info h4 {
     color: #555;
     
@@ -24,9 +29,8 @@ nav.nav {
 }
 
 .aa-heading-info {
-    color: #31708f;
-    background-color: #d9edf7;
-    border: 1px solid #bce8f1;
+    color: #fff;
+    background-color: #6E8999;
     
     font-weight: normal;  
     
@@ -35,7 +39,8 @@ nav.nav {
     position: relative;
 }
 
-.aa-heading-info::before {
+/*
+.aa-heading-info:before {
     content: '';
     
     height: 0;
@@ -50,8 +55,9 @@ nav.nav {
     bottom: -12px;
     right: 12px;
 }
+*/
 
-.aa-heading-info::after {
+.aa-heading-info:after {
     content: '';
     
     height: 0;
@@ -59,7 +65,7 @@ nav.nav {
     
     border-left: 14px solid transparent;
     border-right: 14px solid transparent;
-    border-top: 14px solid #bce8f1;
+    border-top: 14px solid #6E8999;
     
     position: absolute;
     bottom: -14px;
@@ -67,7 +73,12 @@ nav.nav {
 }
 
 .aa-flight-box {
-    background: #fefefe;
+    background: #4db4fa;
+    color: #fff;
+}
+
+.aa-flight-box .text-muted {
+    color: #eee;
 }
 
 .aa-flight-box h1 {
@@ -158,3 +169,33 @@ nav.nav {
     font-size: 70%;
     font-weight: bold;
 }
+
+.aa-dashboard-discrepancies h1 {
+    margin-bottom: 0;
+}
+
+.aa-dashboard-discrepancies .panel {
+    color: #fff;
+}
+
+.aa-dashboard-discrepancies .panel-all
+{
+    background: #D1D532;
+}
+
+.aa-dashboard-discrepancies .panel-open
+{
+     background: #FAAF00;
+}
+
+.aa-dashboard-discrepancies .panel-deferred
+{
+     background: #FF7318;
+}
+
+.aa-dashboard-discrepancies .panel-mel
+{
+     background: #F52305;
+}
+
+

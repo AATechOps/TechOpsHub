@@ -1,0 +1,145 @@
+.brand img
+{
+    margin-left: -25px;
+    max-height: 50px;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.block {
+    margin: 0 0 15px 0;
+}
+
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
+    font-weight: 100;
+}
+
+h1 > small,
+h2 > small,
+h3 > small,
+h4 > small,
+h5 > small,
+h6 > small,
+h1 > .small,
+h2 > .small,
+h3 > .small,
+h4 > .small,
+h5 > .small,
+h6 > .small {
+    display: block;
+    padding-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.panel {
+    margin-bottom: 15px;
+}
+
+.aa-flight-card {
+    color: #fff;
+    background: #4db4fa
+}
+
+.aa-flight-card h1,
+.aa-flight-card h2,
+.aa-flight-card h3,
+.aa-flight-card h4,
+.aa-flight-card h5,
+.aa-flight-card h6,
+.aa-flight-card .h1,
+.aa-flight-card .h2,
+.aa-flight-card .h3,
+.aa-flight-card .h4,
+.aa-flight-card .h5,
+.aa-flight-card .h6 {
+    margin: 0;
+}
+
+.aa-flight-card h3 {
+    border-bottom: 1px solid #eee;
+    
+    margin-bottom: 7px;
+    padding-bottom: 7px;
+}
+
+.aa-flight-card h3 > small {
+    color: #eee;
+    font-size: 60%;
+}
+
+.aa-flight-card h5 > small {
+    color: #eee;
+}
+
+.aa-flight-card h5 > span {
+    font-weight: bold;
+}
+
+.aa-heading {
+    background: #fff;
+    border-bottom: 1px solid #d0dae0;
+    
+    color: #0078d2;
+    font-weight: 100;
+    
+    position: relative;
+    
+    margin: 0 0 20px 0;
+    
+    box-shadow: 0 8px 8px -8px #d0dae0;
+}
+
+.aa-heading small,
+.aa-heading .small {
+    display: inline-block;
+}
+
+.aa-heading:before {
+    content: '';
+    
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-top: 16px solid #d0dae0;
+    
+    position: absolute;
+    bottom: -16px;
+    right: 16px;
+}
+
+.aa-heading:after {
+    content: '';
+    
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 14px solid #fff;
+    
+    position: absolute;
+    bottom: -14px;
+    right: 18px;
+}
+
+h3.aa-heading,
+.h3.aa-heading {    
+    padding: 4px 23px 3px 0;
+}
+
+h4.aa-heading,
+.h4.aa-heading {    
+    padding: 8px 23px 7px 0;
+}
+
+table {
+    font-family: 'Consolas';
+}
+
+table > thead > tr > th {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.aa-heading .search {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
