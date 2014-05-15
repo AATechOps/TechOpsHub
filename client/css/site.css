@@ -152,3 +152,10 @@ table > thead > tr > th {
 .nav > li > a > h1 {
     margin-bottom: 0;
 }
+.nav-log-pages > li > a {
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-log-pages > li > a * {
+    font-family: 'Consolas';
+}
