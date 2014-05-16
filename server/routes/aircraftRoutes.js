@@ -1,7 +1,7 @@
 'use strict';
 
 var express = require('express'),
-    aircraftService = require('../services/aircraft'),
+    aircraftService = require('../services/aircraftService'),
     router = express.Router();
 
 router.get('/aircraft', function (req, res) {

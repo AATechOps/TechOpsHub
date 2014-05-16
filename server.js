@@ -6,7 +6,8 @@ var path = require('path'),
     port = 8088;
 
 app.use(express.static(path.resolve(__dirname, 'client')));
-app.use('/api', require('./server/routes/aircraft'));
+app.use('/api', require('./server/routes/aircraftRoutes'));
+app.use('/api', require('./server/routes/logPageRoutes'));
 
 app.listen(port, function () {
     console.log('Server listening on port %s', port);
