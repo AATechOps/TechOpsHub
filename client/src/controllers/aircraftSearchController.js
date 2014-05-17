@@ -10,10 +10,10 @@ define(function (require) {
         }
     };
     
-    var AircraftSearchController = function ($scope, $rootScope, Aircraft) {
+    var AircraftSearchController = function ($scope, $rootScope, aircraft) {
         $scope.noseNumber = '';
-        $scope.findAircraft = findAircraft.bind($scope, $rootScope, Aircraft);
+        $scope.findAircraft = findAircraft.bind($scope, $rootScope, aircraft);
     };
     
-    return ['$scope', '$rootScope', 'Aircraft', AircraftSearchController];
+    return ['$scope', '$rootScope', 'aircraft', AircraftSearchController];
 });

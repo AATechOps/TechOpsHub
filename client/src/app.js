@@ -23,8 +23,8 @@ define(function (require) {
       .controller('AircraftLogBookController', aircraftLogBookController)
     
       // Register Factories
-      .factory('Aircraft', aircraftFactory)
-      .factory('LogBook', logBookFactory);
+      .factory('aircraft', aircraftFactory)
+      .factory('logBook', logBookFactory);
     
     // Bootstrap application
     ng.bootstrap(document, [appName]);

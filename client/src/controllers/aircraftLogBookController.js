@@ -1,7 +1,7 @@
 define(function (require) {
     'use strict';
     
-    var AircraftLogBookController = function ($scope, LogBook) {
+    var AircraftLogBookController = function ($scope, logBook) {
         var scope = $scope;
         
         $scope.$on('aircraft:search:result', function (sender, args) {
@@ -10,5 +10,5 @@ define(function (require) {
         });
     };
     
-    return ['$scope', AircraftLogBookController];
+    return ['$scope' 'logBook', AircraftLogBookController];
 });

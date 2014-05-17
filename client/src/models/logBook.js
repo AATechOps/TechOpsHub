@@ -3,9 +3,9 @@ define(function (require) {
     
     var ng = require('angular'),
         LogBookFactory = function ($resource) {
-            var LogBook = $resource('./api/aircraft/:noseNumber/logBook', { noseNumber: '@id' });
+            var logBook = $resource('./api/aircraft/:noseNumber/logBook', { noseNumber: '@id' });
             
-            return LogBook;
+            return logBook;
         };
     
     return ['$resource', LogBookFactory];
