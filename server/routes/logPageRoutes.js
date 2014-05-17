@@ -4,7 +4,7 @@ var express = require('express'),
     logPageService = require('../services/logPageService'),
     router = express.Router();
 
-router.get('/aircraft/:noseNumber/logPages', function (req, res) {
+router.get('/aircraft/:noseNumber/logBook', function (req, res) {
     logPageService.getOpenLogItems(req.params.noseNumber, res.json.bind(res));
 });
 

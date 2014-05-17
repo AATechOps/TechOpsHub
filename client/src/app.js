@@ -18,12 +18,12 @@ define(function (require) {
     ng.module(appName, ['ngRoute', 'ngResource'])
     
       // Register Controllers
-      .controller('AircraftSearchController', aircraftSearchController),
-      .controller('AircraftAttributesController', aircraftAttributesController),
-      .controller('AircraftLogBookController', aircraftLogBookController),
+      .controller('AircraftSearchController', aircraftSearchController)
+      .controller('AircraftAttributesController', aircraftAttributesController)
+      .controller('AircraftLogBookController', aircraftLogBookController)
     
       // Register Factories
-      .factory('Aircraft', aircraftFactory),
+      .factory('Aircraft', aircraftFactory)
       .factory('LogBook', logBookFactory);
     
     // Bootstrap application

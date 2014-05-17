@@ -180,7 +180,7 @@
                         </div>
                     </div>
                     
-                    <div class="row" data-ng-controller="AircraftLogPageController">
+                    <div class="row" data-ng-controller="AircraftLogBookController">
                         <div class="col-xs-12">
                             <h4 class="aa-heading">
                                 <span>Discrepancies</span>
@@ -232,19 +232,19 @@
                                         <th class="col-sm-2">DATE</th>
                                     </tr>
                                 </thead>
-                                <tbody data-ng-repeat="logPages">
+                                <tbody data-ng-repeat="lp in logPages">
                                     <tr>
                                         <td rowspan="2">
-                                            <a href="#" data-ng-bind="LogNumber"></a>
+                                            <a href="#" data-ng-bind="lp.LogNumber"></a>
                                         </td>
-                                        <td class="hidden-xs" data-ng-bind="ATA"></td>
-                                        <td class="hidden-xs"></td>
-                                        <td data-ng-bind="DeferralCode"></td>
-                                        <td data-ng-bind="Station"></td>
-                                        <td data-ng-bind="DeferralDate"></td>
+                                        <td class="hidden-xs" data-ng-bind="lp.ATA"></td>
+                                        <td class="hidden-xs">DEFERRED</td>
+                                        <td data-ng-bind="lp.DeferralCode"></td>
+                                        <td data-ng-bind="lp.Station"></td>
+                                        <td data-ng-bind="lp.DeferralDate"></td>
                                     </tr>
                                     <tr>
-                                        <td colspan="5" class="text-muted ellipsis" data-ng-bind="LogItemTitleCommentInfo"></td>
+                                        <td colspan="5" class="text-muted ellipsis" data-ng-bind="lp.LogItemTitleCommentInfo"></td>
                                     </tr>
                                 </tbody>
                             </table>
