@@ -180,13 +180,13 @@
                         </div>
                     </div>
                     
-                    <div class="row">
+                    <div class="row" data-ng-controller="AircraftLogPageController">
                         <div class="col-xs-12">
                             <h4 class="aa-heading">
                                 <span>Discrepancies</span>
                             </h4>
                             
-                            <ul class="nav nav-summary block">
+                            <ul class="nav nav-summary block" data-ng-show="aircraft">
                                 <li class="active">
                                     <a href="#">
                                         <h1 class="text-right text-info">
@@ -221,7 +221,7 @@
                                 </li>
                             </ul>
                             
-                            <table class="table table-condensed">
+                            <table class="table table-condensed" data-ng-show="aircraft">
                                 <thead>
                                     <tr>
                                         <th class="col-sm-2">LOG #</th>
@@ -232,21 +232,19 @@
                                         <th class="col-sm-2">DATE</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody data-ng-repeat="logPages">
                                     <tr>
                                         <td rowspan="2">
-                                            <a href="#">23498703</a>
+                                            <a href="#" data-ng-bind="LogNumber"></a>
                                         </td>
-                                        <td class="hidden-xs">2110</td>
-                                        <td class="hidden-xs">DEFERRED</td>
-                                        <td>NEF</td>
-                                        <td>DFW</td>
-                                        <td>05 MAY 14</td>
+                                        <td class="hidden-xs" data-ng-bind="ATA"></td>
+                                        <td class="hidden-xs"></td>
+                                        <td data-ng-bind="DeferralCode"></td>
+                                        <td data-ng-bind="Station"></td>
+                                        <td data-ng-bind="DeferralDate"></td>
                                     </tr>
                                     <tr>
-                                        <td colspan="5" class="text-muted ellipsis">
-                                            A TRIM PIECE IS COMING OFF A WINDOW -- SEAT 14A
-                                        </td>
+                                        <td colspan="5" class="text-muted ellipsis" data-ng-bind="LogItemTitleCommentInfo"></td>
                                     </tr>
                                 </tbody>
                             </table>

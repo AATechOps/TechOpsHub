@@ -8,19 +8,23 @@ define(function (require) {
         // Controllers
         aircraftSearchController = require('./controllers/aircraftSearchController'),
         aircraftAttributesController = require('./controllers/aircraftAttributesController'),
+        aircraftLogBookController = require('./controllers/aircraftLogBookController'),
         
         // Factories
-        aircraftFactory = require('./models/aircraft');
+        aircraftFactory = require('./models/aircraft'),
+        logBookFactory = require('./models/logBook');
     
     // Configure main application module
     ng.module(appName, ['ngRoute', 'ngResource'])
     
       // Register Controllers
-      .controller('AircraftSearchController', aircraftSearchController)
-      .controller('AircraftAttributesController', aircraftAttributesController)
+      .controller('AircraftSearchController', aircraftSearchController),
+      .controller('AircraftAttributesController', aircraftAttributesController),
+      .controller('AircraftLogBookController', aircraftLogBookController),
     
       // Register Factories
-      .factory('Aircraft', aircraftFactory);
+      .factory('Aircraft', aircraftFactory),
+      .factory('LogBook', logBookFactory);
     
     // Bootstrap application
     ng.bootstrap(document, [appName]);
