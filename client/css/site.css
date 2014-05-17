@@ -201,6 +201,10 @@ table {
     table-layout: fixed;
 }
 
+table > tbody:nth-child(even) {
+    background: #f9f9f9;
+}
+
 .ellipsis {
     white-space: nowrap;
     text-overflow: ellipsis;

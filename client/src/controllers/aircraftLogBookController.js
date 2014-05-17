@@ -8,7 +8,16 @@ define(function (require) {
             scope.aircraft = args;
             
             logBook.query({ noseNumber: args.TailNumber }).$promise.then(function (result) {
+                var index = {};
+                
+                result.map(function (c) {
+                    return c.DeferralCode;
+                }).forEach(function (c) {
+                    index[c] ? index[c] = ++index[c] : index[c] = 1;
+                });
+                
                 scope.logPages = result;
+                scope.lopPageIndex = index;
             });
         });
     };

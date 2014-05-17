@@ -186,26 +186,27 @@
                                 <span>Discrepancies</span>
                             </h4>
                             
-                            <ul class="nav nav-summary block" data-ng-show="aircraft">
+                            <ul class="nav nav-summary block" data-ng-show="logPages">
                                 <li class="active">
                                     <a href="#">
-                                        <h1 class="text-right text-info">
-                                            10
+                                        <h1 class="text-right text-primary">
+                                            <span data-ng-bind="logPages.length"></span>
                                             <small>Log Pages</small>
                                         </h1>
                                     </a>
                                 </li>
-                                <li>
+                                <li data-ng-repeat="(def, sum) in lopPageIndex">
                                     <a href="#">
-                                        <h1 class="text-right text-warning">
-                                            3
-                                            <small>NEF Logs</small>
+                                        <h1 class="text-right text-muted">
+                                            <span data-ng-bind="sum"></span>
+                                            <small>{{def}} Logs</small>
                                         </h1>
                                     </a>
                                 </li>
+<!--
                                 <li>
                                     <a href="#">
-                                        <h1 class="text-right text-danger">
+                                        <h1 class="text-right text-muted">
                                             4
                                             <small>MEL Logs</small>
                                         </h1>
@@ -213,15 +214,16 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <h1 class="text-right text-warning">
+                                        <h1 class="text-right text-muted">
                                             3
                                             <small>TFI Logs</small>
                                         </h1>
                                     </a>
                                 </li>
+-->
                             </ul>
                             
-                            <table class="table table-condensed" data-ng-show="aircraft">
+                            <table class="table table-condensed" data-ng-show="logPages">
                                 <thead>
                                     <tr>
                                         <th class="col-sm-2">LOG #</th>
@@ -241,7 +243,7 @@
                                         <td class="hidden-xs">DEFERRED</td>
                                         <td data-ng-bind="lp.DeferralCode"></td>
                                         <td data-ng-bind="lp.Station"></td>
-                                        <td data-ng-bind="lp.DeferralDate"></td>
+                                        <td data-ng-bind="lp.DeferralDate | date: 'dd MMM yyyy'"></td>
                                     </tr>
                                     <tr>
                                         <td colspan="5" class="text-muted ellipsis" data-ng-bind="lp.LogItemTitleCommentInfo"></td>
