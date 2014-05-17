@@ -178,7 +178,7 @@
                                 <span>Discrepancies</span>
                             </h4>
                             
-                            <ul class="nav nav-pills nav-justified block">
+                            <ul class="nav nav-summary block">
                                 <li class="active">
                                     <a href="#">
                                         <h1 class="text-right text-info">
@@ -213,89 +213,34 @@
                                 </li>
                             </ul>
                             
-<!--
-                            <div class="row">
-                                <ul class="nav nav-log-pages col-xs-12">
-                                    <li class="col-xs-12">
-                                        <a href="#">
-                                            <span class="col-sm-1 hidden-xs text-muted">2110</span>
-                                            <span class="col-xs-4 col-sm-2">23498703</span>
-                                            <span class="col-xs-2 col-sm-2 hidden-xs text-muted">DEFERRED</span>
-                                            <span class="col-xs-2">
-                                                <span class="label label-warning">NEF</span>
-                                            </span>
-                                            <span class="col-xs-6 col-sm-5 text-muted">
-                                                14 MAY 2014
-                                            </span>
-                                            <span class="col-xs-12 text-muted">
-                                                A TRIM PIECE IS COMING OFF A WINDOW -- SEAT 14A
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
--->
-                            
                             <table class="table table-condensed">
                                 <thead>
                                     <tr>
-                                        <th class="col-xs-1">LOG #</th>
-                                        <th class="col-xs-1 hidden-xs">ATA</th>
-                                        <th class="col-xs-1 hidden-xs">STATUS</th>
-                                        <th class="col-xs-1">CODE</th>
-                                        <th class="col-xs-1">STATION</th>
-                                        <th class="col-xs-1">DATE</th>
-                                        <th class="col-xs-6 hidden-xs">COMMENTS</th>
+                                        <th class="col-sm-2">LOG #</th>
+                                        <th class="col-sm-2 hidden-xs">ATA</th>
+                                        <th class="col-sm-2 hidden-xs">STATUS</th>
+                                        <th class="col-sm-2">CODE</th>
+                                        <th class="col-sm-2">STATION</th>
+                                        <th class="col-sm-2">DATE</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>
+                                        <td rowspan="2">
                                             <a href="#">23498703</a>
                                         </td>
                                         <td class="hidden-xs">2110</td>
                                         <td class="hidden-xs">DEFERRED</td>
                                         <td>NEF</td>
                                         <td>DFW</td>
-                                        <td>05-14-14</td>
-                                        <td class="hidden-xs text-muted">A TRIM PIECE IS COMING OFF A WINDOW -- SEAT 14A</td>
+                                        <td>05 MAY 14</td>
                                     </tr>
-                                    <tr class="visible-xs">                                        
-                                        <td colspan="4" class="text-muted">A TRIM PIECE IS COMING OFF A WINDOW -- SEAT 14A</td>
-                                    </tr>
-                                </tbody>
-<!--
-                                <tbody>                                    
                                     <tr>
-                                        <td rowspan="2">
-                                            <a href="#">12345678</a>
+                                        <td colspan="5" class="text-muted ellipsis">
+                                            A TRIM PIECE IS COMING OFF A WINDOW -- SEAT 14A
                                         </td>
-                                        <td>3410</td>
-                                        <td class="hidden-xs">CLOSED</td>
-                                        <td>MEL</td>
-                                        <td>CLT</td>
-                                        <td class="hidden-xs">7 MAY 14</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="5" class="text-muted">COFFEE POT CIRCUIT BREAKER KEEPS POPPING - 1ST CLASS GALLEY</td>
                                     </tr>
                                 </tbody>
-                                <tbody>
-                                    <tr>
-                                        <td rowspan="2">
-                                            <a href="#">98765123</a>
-                                        </td>
-                                        <td>2310</td>
-                                        <td class="hidden-xs">DEFERRED</td>
-                                        <td>TFI</td>
-                                        <td>PHX</td>
-                                        <td class="hidden-xs">6 MAY 14</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="5" class="text-muted">FOLLOW UP CK ON</td>
-                                    </tr>
-                                </tbody>
--->
                             </table>
                         </div>
                     </div>
@@ -307,125 +252,29 @@
                             <table class="table table-condensed">
                                 <thead>
                                     <tr>
-                                        <th>ATA</th>
-                                        <th>LOG #</th>
-                                        <th class="hidden-xs">STATUS</th>
-                                        <th>CODE</th>
-                                        <th>STATION</th>
-                                        <th class="hidden-xs">DATE</th>
-                                        <th class="hidden-xs">COMMENTS</th>
+                                        <th class="col-sm-2">LOG #</th>
+                                        <th class="col-sm-2 hidden-xs">ATA</th>
+                                        <th class="col-sm-2 hidden-xs">STATUS</th>
+                                        <th class="col-sm-2">CODE</th>
+                                        <th class="col-sm-2">STATION</th>
+                                        <th class="col-sm-2">DATE</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="warning">
-                                        <td>2110</td>
-                                        <td>
+                                    <tr>
+                                        <td rowspan="2">
                                             <a href="#">23498703</a>
                                         </td>
+                                        <td class="hidden-xs">2110</td>
                                         <td class="hidden-xs">DEFERRED</td>
                                         <td>NEF</td>
                                         <td>DFW</td>
-                                        <td class="hidden-xs">14 MAR 14</td>
-                                        <td class="hidden-xs">A TRIM PIECE IS COMING OFF A WINDOW -- SEAT 14A</td>
-                                    </tr>
-                                    <tr class="danger">
-                                        <td>3410</td>
-                                        <td>
-                                            <a href="#">12345678</a>
-                                        </td>
-                                        <td class="hidden-xs">CLOSED</td>
-                                        <td>MEL</td>
-                                        <td>CLT</td>
-                                        <td class="hidden-xs">7 MAY 14</td>
-                                        <td class="hidden-xs">COFFEE POT CIRCUIT BREAKER KEEPS POPPING - 1ST CLASS GALLEY</td>
+                                        <td>05 MAY 14</td>
                                     </tr>
                                     <tr>
-                                        <td>2310</td>
-                                        <td>
-                                            <a href="#">98765123</a>
+                                        <td colspan="5" class="text-muted ellipsis">
+                                            A TRIM PIECE IS COMING OFF A WINDOW -- SEAT 14A
                                         </td>
-                                        <td class="hidden-xs">DEFERRED</td>
-                                        <td>TFI</td>
-                                        <td>PHX</td>
-                                        <td class="hidden-xs">6 MAY 14</td>
-                                        <td class="hidden-xs">FOLLOW UP CK ON</td>
-                                    </tr>
-                                    <tr class="warning">
-                                        <td>2110</td>
-                                        <td>
-                                            <a href="#">23498703</a>
-                                        </td>
-                                        <td class="hidden-xs">DEFERRED</td>
-                                        <td>NEF</td>
-                                        <td>DFW</td>
-                                        <td class="hidden-xs">14 MAR 14</td>
-                                        <td class="hidden-xs">A TRIM PIECE IS COMING OFF A WINDOW -- SEAT 14A</td>
-                                    </tr>
-                                    <tr class="danger">
-                                        <td>3410</td>
-                                        <td>
-                                            <a href="#">12345678</a>
-                                        </td>
-                                        <td class="hidden-xs">CLOSED</td>
-                                        <td>MEL</td>
-                                        <td>CLT</td>
-                                        <td class="hidden-xs">7 MAY 14</td>
-                                        <td class="hidden-xs">COFFEE POT CIRCUIT BREAKER KEEPS POPPING - 1ST CLASS GALLEY</td>
-                                    </tr>
-                                    <tr class="danger">
-                                        <td>3410</td>
-                                        <td>
-                                            <a href="#">12345678</a>
-                                        </td>
-                                        <td class="hidden-xs">CLOSED</td>
-                                        <td>MEL</td>
-                                        <td>CLT</td>
-                                        <td class="hidden-xs">7 MAY 14</td>
-                                        <td class="hidden-xs">COFFEE POT CIRCUIT BREAKER KEEPS POPPING - 1ST CLASS GALLEY</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2310</td>
-                                        <td>
-                                            <a href="#">98765123</a>
-                                        </td>
-                                        <td class="hidden-xs">DEFERRED</td>
-                                        <td>TFI</td>
-                                        <td>PHX</td>
-                                        <td class="hidden-xs">6 MAY 14</td>
-                                        <td class="hidden-xs">FOLLOW UP CK ON</td>
-                                    </tr>
-                                    <tr class="warning">
-                                        <td>2110</td>
-                                        <td>
-                                            <a href="#">23498703</a>
-                                        </td>
-                                        <td class="hidden-xs">DEFERRED</td>
-                                        <td>NEF</td>
-                                        <td>DFW</td>
-                                        <td class="hidden-xs">14 MAR 14</td>
-                                        <td class="hidden-xs">A TRIM PIECE IS COMING OFF A WINDOW -- SEAT 14A</td>
-                                    </tr>
-                                    <tr class="danger">
-                                        <td>3410</td>
-                                        <td>
-                                            <a href="#">12345678</a>
-                                        </td>
-                                        <td class="hidden-xs">CLOSED</td>
-                                        <td>MEL</td>
-                                        <td>CLT</td>
-                                        <td class="hidden-xs">7 MAY 14</td>
-                                        <td class="hidden-xs">COFFEE POT CIRCUIT BREAKER KEEPS POPPING - 1ST CLASS GALLEY</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2310</td>
-                                        <td>
-                                            <a href="#">98765123</a>
-                                        </td>
-                                        <td class="hidden-xs">DEFERRED</td>
-                                        <td>TFI</td>
-                                        <td>PHX</td>
-                                        <td class="hidden-xs">6 MAY 14</td>
-                                        <td class="hidden-xs">FOLLOW UP CK ON</td>
                                     </tr>
                                 </tbody>
                             </table>
