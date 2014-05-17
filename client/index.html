@@ -50,15 +50,23 @@
                     <div class="row" data-ng-show="aircraft" data-ng-controller="AircraftAttributesController">
                         <h3 class="col-xs-4 col-md-12">
                             <small>Aircraft</small>
-                            <span data-ng-bind="aircraft.noseNumber"></span>
+                            <span data-ng-bind="aircraft.TailNumber"></span>
+                        </h3>
+                        <h3 class="col-xs-4 col-md-12">
+                            <small>Registration</small>
+                            <span data-ng-bind="aircraft.RegistrationNumber"></span>
                         </h3>
                         <h3 class="col-xs-4 col-md-12">
                             <small>Equipment</small>
-                            <span data-ng-bind="aircraft.registration"></span>
+                            <span data-ng-bind="aircraft.EquipmentType"></span>
                         </h3>
                         <h3 class="col-xs-4 col-md-12">
                             <small>Engine</small>
-                            <span>CFM56-6</span>
+                            <span data-ng-bind="aircraft.EngineType"></span>
+                        </h3>
+                        <h3 class="col-xs-4 col-md-12">
+                            <small>Operator</small>
+                            <span data-ng-bind="aircraft.Operator"></span>
                         </h3>
                     </div>
                 </div>

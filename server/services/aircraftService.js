@@ -13,3 +13,9 @@ module.exports.getAllActiveAircraft = function (callback) {
         callback(result.GetAllActiveAircraftsResult.Aircraft);
     });
 };
+
+module.exports.getAircraftByNoseNumber = function (noseNumber, callback) {
+    ws.GetAircraftByTailNumber({ tailNumber: noseNumber }, function (err, result) {
+        callback(result.GetAircraftByTailNumberResult);
+    });
+};

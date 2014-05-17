@@ -1,20 +1,19 @@
 define(function (require) {
     'use strict';
     
-    var findAircraft = function (dispatcher) {
-        var aircraft = {
-            noseNumber: this.noseNumber,
-            registration: ['N', this.noseNumber, 'SW'].join('')
-        }
+    var findAircraft = function (dispatcher, model) {
+        var aircraft = model.get({ noseNumber: this.noseNumber });
         
-        dispatcher.$broadcast('aircraft:search:result', aircraft);
-        this.noseNumber = '';
+        if (aircraft) {
+            dispatcher.$broadcast('aircraft:search:result', aircraft);
+            this.noseNumber = '';
+        }
     };
     
-    var AircraftSearchController = function ($scope, $rootScope) {
+    var AircraftSearchController = function ($scope, $rootScope, Aircraft) {
         $scope.noseNumber = '';
-        $scope.findAircraft = findAircraft.bind($scope, $rootScope);
+        $scope.findAircraft = findAircraft.bind($scope, $rootScope, Aircraft);
     };
     
-    return ['$scope', '$rootScope', AircraftSearchController];
+    return ['$scope', '$rootScope', 'Aircraft', AircraftSearchController];
 });
