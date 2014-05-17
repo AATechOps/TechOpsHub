@@ -6,9 +6,12 @@ define(function (require) {
         
         $scope.$on('aircraft:search:result', function (sender, args) {
             scope.aircraft = args;
-            scope.logPages = LogBook.get({ noseNumber: args.TailNumber });
+            
+            logBook.query({ noseNumber: args.TailNumber }).$promise.then(function (result) {
+                scope.logPages = result;
+            });
         });
     };
     
-    return ['$scope' 'logBook', AircraftLogBookController];
+    return ['$scope', 'logBook', AircraftLogBookController];
 });

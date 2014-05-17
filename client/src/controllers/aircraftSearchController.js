@@ -2,12 +2,15 @@ define(function (require) {
     'use strict';
     
     var findAircraft = function (dispatcher, model) {
-        var aircraft = model.get({ noseNumber: this.noseNumber });
+        var $this = this;
         
-        if (aircraft) {
-            dispatcher.$broadcast('aircraft:search:result', aircraft);
-            this.noseNumber = '';
-        }
+        model.get({ noseNumber: this.noseNumber }).$promise.then(function (result) {
+            if (result) {
+                dispatcher.$broadcast('aircraft:search:result', result);
+            }
+        }).finally(function () {
+                $this.noseNumber = '';
+        });;
     };
     
     var AircraftSearchController = function ($scope, $rootScope, aircraft) {
