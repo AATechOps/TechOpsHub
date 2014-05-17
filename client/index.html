@@ -38,23 +38,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-2">
-                    <form class="form-inline block" role="form">
+                    <form class="form-inline block" role="form" data-ng-submit="findAircraft()" data-ng-controller="AircraftSearchController">
                         <span class="input-group">
-                            <input type="text" class="form-control" placeholder="Nose #">
+                            <input type="text" class="form-control" placeholder="Nose #" data-ng-model="noseNumber">
                             <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">Find</button>
+                                <button class="btn btn-default" type="submit">Find</button>
                             </span>
                         </span>
                     </form>
                     
-                    <div class="row">
+                    <div class="row" data-ng-show="aircraft" data-ng-controller="AircraftAttributesController">
                         <h3 class="col-xs-4 col-md-12">
                             <small>Aircraft</small>
-                            <span>154</span>
+                            <span data-ng-bind="aircraft.noseNumber"></span>
                         </h3>
                         <h3 class="col-xs-4 col-md-12">
                             <small>Equipment</small>
-                            <span>A321</span>
+                            <span data-ng-bind="aircraft.registration"></span>
                         </h3>
                         <h3 class="col-xs-4 col-md-12">
                             <small>Engine</small>
