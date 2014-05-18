@@ -71,7 +71,7 @@
                     </div>
                 </div>
                 
-                <div class="col-xs-12 col-md-10">
+                <div class="col-xs-12 col-md-10" data-ng-controller="AircraftRoutingController">
                     <div class="row">
                         <div class="col-md-12">
                             <h4 class="aa-heading">
@@ -79,47 +79,23 @@
                             </h4>
                         </div>
                         
-                        <div class="col-xs-12">
+                        <div class="col-xs-12" data-ng-show="flights">
                             <ul class="col-xs-12 nav-horizontal">
-                                <li>
+                                <li data-ng-repeat="fl in flights">
                                     <div class="panel panel-default aa-flight-card">
                                         <div class="panel-body">
                                             <h3>
-                                                <small>Flight 1234</small>
-                                                <span>LAX</span>&nbsp;&rarr;&nbsp;<span>PHX</span>
+                                                <small>Flight <span data-ng-bind="fl.FlightNumber"></span></small>
+                                                <span data-ng-bind="fl.OrigStation"></span>&nbsp;&rarr;&nbsp;<span data-ng-bind="fl.DestStation"></span>
                                             </h3>
                                             <div class="row">
                                                 <h5 class="col-xs-5">
-                                                    <small>SCH 00:00</small>
-                                                    <span>00:00</span>
+                                                    <small>SCH <span data-ng-bind="fl.ArrivalTime | date: 'hh:mm'"></span></small>
+                                                    <span data-ng-bind="fl.ArrivalTime | date: 'hh:mm'"></span>
                                                 </h5>
                                                 <h5 class="col-xs-3">
                                                     <small>GATE</small>
-                                                    <span>A1</span>
-                                                </h5>
-                                                <h5 class="col-xs-4">
-                                                    <small>GND</small>
-                                                    <span>00:00</span>
-                                                </h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="panel panel-default aa-flight-card">
-                                        <div class="panel-body">
-                                            <h3>
-                                                <small>Flight 1234</small>
-                                                <span>PHX</span>&nbsp;&rarr;&nbsp;<span>DFW</span>
-                                            </h3>
-                                            <div class="row">
-                                                <h5 class="col-xs-5">
-                                                    <small>SCH 00:00</small>
-                                                    <span>00:00</span>
-                                                </h5>
-                                                <h5 class="col-xs-3">
-                                                    <small>GATE</small>
-                                                    <span>A1</span>
+                                                    <span></span>
                                                 </h5>
                                                 <h5 class="col-xs-4">
                                                     <small>GND</small>
@@ -131,108 +107,6 @@
                                 </li>
                             </ul>
                         </div>
-                        
-<!--
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                            <div class="panel panel-default aa-flight-card">
-                                <div class="panel-body">
-                                    <h3>
-                                        <small>Flight 1234</small>
-                                        <span>LAX</span>&nbsp;&rarr;&nbsp;<span>PHX</span>
-                                    </h3>
-                                    <div class="row">
-                                        <h5 class="col-xs-5">
-                                            <small>SCH 00:00</small>
-                                            <span>00:00</span>
-                                        </h5>
-                                        <h5 class="col-xs-3">
-                                            <small>GATE</small>
-                                            <span>A1</span>
-                                        </h5>
-                                        <h5 class="col-xs-4">
-                                            <small>GND</small>
-                                            <span>00:00</span>
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 hidden-xs">
-                            <div class="panel panel-default aa-flight-card">
-                                <div class="panel-body">
-                                    <h3>
-                                        <small>Flight 1234</small>
-                                        <span>PHX</span>&nbsp;&rarr;&nbsp;<span>DFW</span>
-                                    </h3>
-                                    <div class="row">
-                                        <h5 class="col-xs-5">
-                                            <small>SCH 00:00</small>
-                                            <span>00:00</span>
-                                        </h5>
-                                        <h5 class="col-xs-3">
-                                            <small>GATE</small>
-                                            <span>A1</span>
-                                        </h5>
-                                        <h5 class="col-xs-4">
-                                            <small>GND</small>
-                                            <span>00:00</span>
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 visible-md visible-lg">
-                            <div class="panel panel-default aa-flight-card">
-                                <div class="panel-body">
-                                    <h3>
-                                        <small>Flight 1234</small>
-                                        <span>DFW</span>&nbsp;&rarr;&nbsp;<span>BOS</span>
-                                    </h3>
-                                    <div class="row">
-                                        <h5 class="col-xs-5">
-                                            <small>SCH 00:00</small>
-                                            <span>00:00</span>
-                                        </h5>
-                                        <h5 class="col-xs-3">
-                                            <small>GATE</small>
-                                            <span>A1</span>
-                                        </h5>
-                                        <h5 class="col-xs-4">
-                                            <small>GND</small>
-                                            <span>00:00</span>
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 visible-lg">
-                            <div class="panel panel-default aa-flight-card">
-                                <div class="panel-body">
-                                    <h3>
-                                        <small>Flight 1234</small>
-                                        <span>BOS</span>&nbsp;&rarr;&nbsp;<span>PHL</span>
-                                    </h3>
-                                    <div class="row">
-                                        <h5 class="col-xs-5">
-                                            <small>SCH 00:00</small>
-                                            <span>00:00</span>
-                                        </h5>
-                                        <h5 class="col-xs-3">
-                                            <small>GATE</small>
-                                            <span>A1</span>
-                                        </h5>
-                                        <h5 class="col-xs-4">
-                                            <small>GND</small>
-                                            <span>00:00</span>
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
--->
                     </div>
                     
                     <div class="row" data-ng-controller="AircraftLogBookController">
@@ -258,24 +132,6 @@
                                         </h1>
                                     </a>
                                 </li>
-<!--
-                                <li>
-                                    <a href="#">
-                                        <h1 class="text-right text-muted">
-                                            4
-                                            <small>MEL Logs</small>
-                                        </h1>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <h1 class="text-right text-muted">
-                                            3
-                                            <small>TFI Logs</small>
-                                        </h1>
-                                    </a>
-                                </li>
--->
                             </ul>
                             
                             <table class="table table-condensed" data-ng-show="logPages">

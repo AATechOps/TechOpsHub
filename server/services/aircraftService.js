@@ -2,7 +2,7 @@
 
 var soap = require('soap'),
     acUrl = 'http://airopscommonws/AircraftInfo.asmx?wsdl',
-    fsUrl = '',
+    fsUrl = 'http://phx-vm-toweb01u/US.MechanicsGateway.Services/1.0/MechanicsGatewayAPI/RampInformationService.svc?wsdl',
     acClient = {},
     fsClient = {};
 
@@ -27,5 +27,7 @@ module.exports.getAircraftByNoseNumber = function (noseNumber, callback) {
 };
 
 module.exports.getAircraftRoutingByNoseNumber = function (noseNumber, callback) {
-    
+    fsClient.GetAircraftRoutingData({ aircraftId: noseNumber, viewTime: 4 }, function (err, result) {
+        callback(result.GetAircraftRoutingDataResult.AircraftRoutingList.AircraftRoutingResponseData);
+    });
 };

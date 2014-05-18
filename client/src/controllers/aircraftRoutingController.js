@@ -5,7 +5,8 @@ define(function (require) {
         var scope = $scope;
         
         $scope.$on('aircraft:search:result', function (sender, args) {
-            flightLeg.query({ noseNumber: args.TailNumber }, function () {
+            flightLeg.query({ noseNumber: args.TailNumber }).$promise.then(function (result) {
+                scope.flights = result;
             });
         });
     };
