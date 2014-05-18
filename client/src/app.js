@@ -23,6 +23,7 @@ define(function (require) {
       .controller('AircraftSearchController', aircraftSearchController)
       .controller('AircraftAttributesController', aircraftAttributesController)
       .controller('AircraftLogBookController', aircraftLogBookController)
+      .controller('AircraftRoutingController', aircraftRoutingController)
     
       // Register Factories
       .factory('aircraft', aircraftFactory)
