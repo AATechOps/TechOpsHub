@@ -246,3 +246,8 @@ table > tbody:nth-child(even) {
 .navbar-fixed-top-offset {
     padding-top: 65px;
 }
+
+/* gross? */
+.aircraftinfo.affix {
+    width: 165px;
+}

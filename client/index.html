@@ -26,27 +26,27 @@
                 <div class="navbar-header">
                     <ul class="nav navbar-nav" data-bs-scrollspy>
                         <li data-bs-scrollspy data-target="#routing">
-                            <a href="#routing">
+                            <a href="#">
                                 Aircraft Routing
                             </a>
                         </li>
                         <li data-bs-scrollspy data-target="#discrepancies">
-                            <a href="#discrepancies">
+                            <a href="#">
                                 Discrepancies
                             </a>
                         </li>
                         <li data-bs-scrollspy data-target="#history">
-                            <a href="#history">
+                            <a href="#">
                                 History
                             </a>
                         </li>
                         <li data-bs-scrollspy data-target="#manuals">
-                            <a href="#manuals">
+                            <a href="#">
                                 Manuals
                             </a>
                         </li>
                         <li data-bs-scrollspy data-target="#drawings">
-                            <a href="#drawings">
+                            <a href="#">
                                 Drawings
                             </a>
                         </li>
@@ -58,39 +58,40 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-2 navbar-fixed-top-offset">
-                    <form class="form-inline block" role="form" data-ng-submit="findAircraft()" data-ng-controller="AircraftSearchController">
-                        <span class="input-group">
-                            <input type="text" class="form-control" placeholder="Nose #" data-ng-model="noseNumber">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="submit">Find</button>
+                    <div class="aircraftinfo" data-offset-top="-65" data-bs-affix="">
+                        <form class="form-inline block" role="form" data-ng-submit="findAircraft()" data-ng-controller="AircraftSearchController">
+                            <span class="input-group">
+                                <input type="text" class="form-control" placeholder="Nose #" data-ng-model="noseNumber">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">Find</button>
+                                </span>
                             </span>
-                        </span>
-                    </form>
-                    
-                    <div class="row" data-ng-show="aircraft" data-ng-controller="AircraftAttributesController">
-                        <h3 class="col-xs-4 col-md-12">
-                            <small>Aircraft</small>
-                            <span data-ng-bind="aircraft.TailNumber"></span>
-                        </h3>
-                        <h3 class="col-xs-4 col-md-12">
-                            <small>Registration</small>
-                            <span data-ng-bind="aircraft.RegistrationNumber"></span>
-                        </h3>
-                        <h3 class="col-xs-4 col-md-12">
-                            <small>Equipment</small>
-                            <span data-ng-bind="aircraft.EquipmentType"></span>
-                        </h3>
-                        <h3 class="col-xs-4 col-md-12">
-                            <small>Engine</small>
-                            <span data-ng-bind="aircraft.EngineType"></span>
-                        </h3>
-                        <h3 class="col-xs-4 col-md-12">
-                            <small>Operator</small>
-                            <span data-ng-bind="aircraft.Operator"></span>
-                        </h3>
+                        </form>
+                        
+                        <div class="row" data-ng-show="aircraft" data-ng-controller="AircraftAttributesController">
+                            <h3 class="col-xs-4 col-md-12">
+                                <small>Aircraft</small>
+                                <span data-ng-bind="aircraft.TailNumber"></span>
+                            </h3>
+                            <h3 class="col-xs-4 col-md-12">
+                                <small>Registration</small>
+                                <span data-ng-bind="aircraft.RegistrationNumber"></span>
+                            </h3>
+                            <h3 class="col-xs-4 col-md-12">
+                                <small>Equipment</small>
+                                <span data-ng-bind="aircraft.EquipmentType"></span>
+                            </h3>
+                            <h3 class="col-xs-4 col-md-12">
+                                <small>Engine</small>
+                                <span data-ng-bind="aircraft.EngineType"></span>
+                            </h3>
+                            <h3 class="col-xs-4 col-md-12">
+                                <small>Operator</small>
+                                <span data-ng-bind="aircraft.Operator"></span>
+                            </h3>
+                        </div>
                     </div>
                 </div>
-                
                 <div class="col-xs-12 col-md-10 navbar-fixed-top-offset" data-ng-controller="AircraftRoutingController">
                     <div class="row">
                         <div class="col-md-12">
