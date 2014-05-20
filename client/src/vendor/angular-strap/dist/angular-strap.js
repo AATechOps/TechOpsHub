@@ -110,6 +110,7 @@ angular.module('mgcrea.ngStrap.affix', [
             unpin = null;
             element.css('position', 'fixed');
             element.css('top', initialAffixTop + 'px');
+            element.css('width', position.width + 'px');
           }
         };
         $affix.$onResize = function () {

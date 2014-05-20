@@ -111,6 +111,7 @@ angular.module('mgcrea.ngStrap.affix', ['mgcrea.ngStrap.helpers.dimensions', 'mg
             unpin = null;
             element.css('position', 'fixed');
             element.css('top', initialAffixTop + 'px');
+            element.css('width', position.width + 'px');
           }
 
         };
@@ -194,7 +195,7 @@ angular.module('mgcrea.ngStrap.affix', ['mgcrea.ngStrap.helpers.dimensions', 'mg
 
   })
 
-  .directive('bsAffix', function($affix, $window) {
+  .directive('bsAffix', ['$affix', '$window', function($affix, $window) {
 
     return {
       restrict: 'EAC',
@@ -215,7 +216,7 @@ angular.module('mgcrea.ngStrap.affix', ['mgcrea.ngStrap.helpers.dimensions', 'mg
       }
     };
 
-  })
+  }])
 
   .directive('bsAffixTarget', function() {
     return {
