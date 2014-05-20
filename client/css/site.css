@@ -242,3 +242,7 @@ table > tbody:nth-child(even) {
 .nav-horizontal li:last-child {
     margin-right: 0;
 }
+
+.navbar-fixed-top-offset {
+    padding-top: 65px;
+}
