@@ -101,7 +101,7 @@
                         
                         <div class="col-xs-12" data-ng-show="flights">
                             <ul class="col-xs-12 nav-horizontal">
-                                <li data-ng-repeat="fl in flights">
+                                <li data-ng-repeat="fl in flights | orderBy:predicate">
                                     <div class="panel panel-default aa-flight-card">
                                         <div class="panel-body">
                                             <h3>

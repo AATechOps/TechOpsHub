@@ -4,6 +4,7 @@ define(function (require) {
     var AircraftRoutingController = function ($scope, flightLeg) {
         var scope = $scope;
         
+        $scope.predicate = 'ArrivalTime';
         $scope.$on('aircraft:search:result', function (sender, args) {
             flightLeg.query({ noseNumber: args.TailNumber }).$promise.then(function (result) {
                 scope.flights = result;
