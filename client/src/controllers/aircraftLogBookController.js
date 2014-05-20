@@ -3,7 +3,10 @@ define(function (require) {
     
     var AircraftLogBookController = function ($scope, logBook) {
         var scope = $scope;
-        
+        $scope.discrepancyFilter = {
+            DeferralCode: ''
+        };
+
         $scope.$on('aircraft:search:result', function (sender, args) {
             scope.aircraft = args;
             

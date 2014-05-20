@@ -116,16 +116,16 @@
                             </h4>
                             
                             <ul class="nav nav-summary block" data-ng-show="logPages">
-                                <li class="active">
-                                    <a href="#">
+                                <li data-ng-class="{active: discrepancyFilter.DeferralCode == ''}">
+                                    <a href="#" data-ng-click="discrepancyFilter.DeferralCode = ''">
                                         <h1 class="text-right text-primary">
                                             <span data-ng-bind="logPages.length"></span>
                                             <small>Log Pages</small>
                                         </h1>
                                     </a>
                                 </li>
-                                <li data-ng-repeat="(def, sum) in lopPageIndex">
-                                    <a href="#">
+                                <li data-ng-repeat="(def, sum) in lopPageIndex" data-ng-class="{active: discrepancyFilter.DeferralCode == def}">
+                                    <a href="#" data-ng-click="discrepancyFilter.DeferralCode = def">
                                         <h1 class="text-right text-muted">
                                             <span data-ng-bind="sum"></span>
                                             <small>{{def}} Logs</small>
@@ -145,7 +145,7 @@
                                         <th class="col-sm-2">DATE</th>
                                     </tr>
                                 </thead>
-                                <tbody data-ng-repeat="lp in logPages">
+                                <tbody data-ng-repeat="lp in logPages | filter: discrepancyFilter">
                                     <tr>
                                         <td rowspan="2">
                                             <a href="#" data-ng-bind="lp.LogNumber"></a>
