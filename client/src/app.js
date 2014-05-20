@@ -17,7 +17,7 @@ define(function (require) {
         flightLegFactory = require('./models/flightLeg');
     
     // Configure main application module
-    ng.module(appName, ['ngRoute', 'ngResource'])
+    ng.module(appName, ['ngRoute', 'ngResource', 'mgcrea.ngStrap'])
     
       // Register Controllers
       .controller('AircraftSearchController', aircraftSearchController)

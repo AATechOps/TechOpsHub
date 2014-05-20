@@ -6,14 +6,17 @@ require.config({
     paths: {
         angular: 'vendor/angular/angular',
         ngRoute: 'vendor/angular-route/angular-route',
-        ngResource: 'vendor/angular-resource/angular-resource'
+        ngResource: 'vendor/angular-resource/angular-resource',
+        ngStrap: 'vendor/angular-strap/dist/angular-strap',
+        ngStrapTpl: 'vendor/angular-strap/dist/angular-strap.tpl'
     },
     
     shim: {
         angular: {
             exports: 'angular'
         },
-        
+        ngStrap: ['angular'],
+        ngStrapTpl: ['ngStrap'],
         ngRoute: ['angular'],
         ngResource: ['angular']
     },
@@ -21,7 +24,9 @@ require.config({
     deps: [
         'angular',
         'ngRoute',
-        'ngResource'
+        'ngResource',
+        'ngStrap',
+        'ngStrapTpl'
     ],
     
     callback: function () {
