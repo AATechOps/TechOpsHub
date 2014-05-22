@@ -4,6 +4,7 @@ require.config({
     baseUrl: './src',
     
     paths: {
+        rx: '//cdnjs.cloudflare.com/ajax/libs/rxjs/2.2.20/rx.lite',
         angular: 'vendor/angular/angular',
         ngRoute: 'vendor/angular-route/angular-route',
         ngResource: 'vendor/angular-resource/angular-resource',
@@ -22,6 +23,7 @@ require.config({
     },
     
     deps: [
+        'rx',
         'angular',
         'ngRoute',
         'ngResource',
