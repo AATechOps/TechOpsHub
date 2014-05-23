@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>AA TechOps Hub</title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./css/site.css" />
+        <link rel="stylesheet" href="./css/animations.css" />
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <nav class="nav navbar-default navbar-fixed-top">
+            <div class="container">
+                <a href="#" class="brand navbar-left">
+                    <img src="./images/aa-logo.png" />
+                </a>
+                <div class="navbar-header">
+                    <ul class="nav navbar-nav" data-bs-scrollspy>
+                        <li data-bs-scrollspy data-target="#routing">
+                            <a href="#">
+                                Aircraft Routing
+                            </a>
+                        </li>
+                        <li data-bs-scrollspy data-target="#discrepancies">
+                            <a href="#">
+                                Discrepancies
+                            </a>
+                        </li>
+                        <li data-bs-scrollspy data-target="#history">
+                            <a href="#">
+                                History
+                            </a>
+                        </li>
+                        <li data-bs-scrollspy data-target="#manuals">
+                            <a href="#">
+                                Manuals
+                            </a>
+                        </li>
+                        <li data-bs-scrollspy data-target="#drawings">
+                            <a href="#">
+                                Drawings
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-2 navbar-fixed-top-offset">
+                    <div data-offset-top="-65" data-bs-affix="">
+                        <form class="form-inline block" role="form" data-ng-submit="findAircraft()" data-ng-controller="AircraftSearchController">
+                            <span class="input-group">
+                                <input type="text" class="form-control" placeholder="Nose #" data-ng-model="noseNumber">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">Find</button>
+                                </span>
+                            </span>
+                        </form>
+                        
+<<<<<<< HEAD
+                        <div class="row" data-ng-show="aircraft" data-ng-controller="AircraftAttributesController">
+                            <h3 class="col-xs-4 col-md-12">
+                                <small>Aircraft</small>
+                                <span data-ng-bind="aircraft.TailNumber"></span>
+                            </h3>
+                            <h3 class="col-xs-4 col-md-12">
+                                <small>Registration</small>
+                                <span data-ng-bind="aircraft.RegistrationNumber"></span>
+                            </h3>
+                            <h3 class="col-xs-4 col-md-12">
+                                <small>Equipment</small>
+                                <span data-ng-bind="aircraft.EquipmentType"></span>
+                            </h3>
+                            <h3 class="col-xs-4 col-md-12">
+                                <small>Engine</small>
+                                <span data-ng-bind="aircraft.EngineType"></span>
+                            </h3>
+                            <h3 class="col-xs-4 col-md-12">
+                                <small>Operator</small>
+                                <span data-ng-bind="aircraft.Operator"></span>
+                            </h3>
+=======
+                        <div class="col-xs-12" data-ng-show="flights">
+                            <ul class="col-xs-12 nav-horizontal">
+                                <li data-ng-repeat="fl in flights | orderBy:predicate">
+                                    <div class="panel panel-default aa-flight-card">
+                                        <div class="panel-body">
+                                            <h3>
+                                                <small>Flight <span data-ng-bind="fl.FlightNumber"></span></small>
+                                                <span data-ng-bind="fl.OrigStation"></span>&nbsp;&rarr;&nbsp;<span data-ng-bind="fl.DestStation"></span>
+                                            </h3>
+                                            <div class="row">
+                                                <h5 class="col-xs-5">
+                                                    <small>SCH <span data-ng-bind="fl.ArrivalTime | date: 'hh:mm'"></span></small>
+                                                    <span data-ng-bind="fl.ArrivalTime | date: 'hh:mm'"></span>
+                                                </h5>
+                                                <h5 class="col-xs-3">
+                                                    <small>GATE</small>
+                                                    <span></span>
+                                                </h5>
+                                                <h5 class="col-xs-4">
+                                                    <small>GND</small>
+                                                    <span>00:00</span>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="row" data-ng-controller="AircraftLogBookController">
+                        <div class="col-xs-12">
+                            <h4 class="aa-heading" id="discrepancies">
+                                Discrepancies
+                            </h4>
+                            
+                            <ul class="nav nav-summary block" data-ng-show="logPages">
+                                <li data-ng-class="{active: discrepancyFilter.DeferralCode == ''}">
+                                    <a href="#" data-ng-click="discrepancyFilter.DeferralCode = ''">
+                                        <h1 class="text-right">
+                                            <span data-ng-bind="logPages.length"></span>
+                                            <small>Log Pages</small>
+                                        </h1>
+                                    </a>
+                                </li>
+                                <li data-ng-repeat="(def, sum) in lopPageIndex" data-ng-class="{active: discrepancyFilter.DeferralCode == def}">
+                                    <a href="#" data-ng-click="discrepancyFilter.DeferralCode = def">
+                                        <h1 class="text-right">
+                                            <span data-ng-bind="sum"></span>
+                                            <small>{{def}} Logs</small>
+                                        </h1>
+                                    </a>
+                                </li>
+                            </ul>
+                            
+                            <table class="table table-condensed" data-ng-show="logPages">
+                                <thead>
+                                    <tr>
+                                        <th class="col-sm-2">LOG #</th>
+                                        <th class="col-sm-2 hidden-xs">ATA</th>
+                                        <th class="col-sm-2 hidden-xs">STATUS</th>
+                                        <th class="col-sm-2">CODE</th>
+                                        <th class="col-sm-2">STATION</th>
+                                        <th class="col-sm-2">DATE</th>
+                                    </tr>
+                                </thead>
+                                <tbody data-ng-repeat="lp in logPages | filter: discrepancyFilter">
+                                    <tr>
+                                        <td rowspan="2">
+                                            <a href="#" data-ng-bind="lp.LogNumber"></a>
+                                        </td>
+                                        <td class="hidden-xs" data-ng-bind="lp.ATA"></td>
+                                        <td class="hidden-xs">DEFERRED</td>
+                                        <td data-ng-bind="lp.DeferralCode"></td>
+                                        <td data-ng-bind="lp.Station"></td>
+                                        <td data-ng-bind="lp.DeferralDate | date: 'dd MMM yyyy'"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="text-muted ellipsis" data-ng-bind="lp.LogItemTitleCommentInfo"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4 class="aa-heading" id="history">
+                                History
+                            </h4>
+                            
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th class="col-sm-2">LOG #</th>
+                                        <th class="col-sm-2 hidden-xs">ATA</th>
+                                        <th class="col-sm-2 hidden-xs">STATUS</th>
+                                        <th class="col-sm-2">CODE</th>
+                                        <th class="col-sm-2">STATION</th>
+                                        <th class="col-sm-2">DATE</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="2">
+                                            <a href="#">23498703</a>
+                                        </td>
+                                        <td class="hidden-xs">2110</td>
+                                        <td class="hidden-xs">DEFERRED</td>
+                                        <td>NEF</td>
+                                        <td>DFW</td>
+                                        <td>05 MAY 14</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="text-muted ellipsis">
+                                            A TRIM PIECE IS COMING OFF A WINDOW -- SEAT 14A
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4 class="aa-heading" id="manuals">
+                                Manuals
+                            </h4>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4 class="aa-heading" id="drawings">
+                                Drawings
+                            </h4>
+>>>>>>> a8465c05eda0ad90fa6ee6fc1cd69ee0737a5250
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-10 navbar-fixed-top-offset" data-ng-controller="AircraftRoutingController">
+                    <div data-ng-include="templates.activeView"></div>
+                </div>
+            </div>
+        </div>
+        
+        <script data-main="./src/config.js" src="./src/vendor/requirejs/require.js"></script>
+    </body>
+</html>
