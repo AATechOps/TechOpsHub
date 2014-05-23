@@ -3,7 +3,7 @@ define(function (require) {
     
     var AircraftRoutingController = function ($scope, flightLeg) {
         var scope = $scope;
-<<<<<<< HEAD
+
         $scope.templates = {
             dashboard: 'src/views/dashboard/dashboard.tpl.html',
             acrouting: 'src/views/dashboard/acrouting.tpl.html',
@@ -16,11 +16,9 @@ define(function (require) {
         $scope.templates.activeView = $scope.templates.dashboard;
         $scope.templates.discrepancyView = $scope.templates.discrepancies;
         $scope.templates.acroutingView = $scope.templates.acrouting;
-
-=======
         
         $scope.predicate = 'ArrivalTime';
->>>>>>> a8465c05eda0ad90fa6ee6fc1cd69ee0737a5250
+        
         $scope.$on('aircraft:search:result', function (sender, args) {
             flightLeg.query({ noseNumber: args.TailNumber }).$promise.then(function (result) {
                 scope.flights = result;
