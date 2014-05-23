@@ -4,6 +4,7 @@ require.config({
     baseUrl: './src',
     
     paths: {
+        rx: '//cdnjs.cloudflare.com/ajax/libs/rxjs/2.2.20/rx.lite',
         angular: 'vendor/angular/angular',
         ngAnimate: 'vendor/angular-animate/angular-animate',
         ngRoute: 'vendor/angular-route/angular-route',
@@ -28,6 +29,7 @@ require.config({
     },
     
     deps: [
+        'rx',
         'angular',
         'ngAnimate',
         'ngRoute',
