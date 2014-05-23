@@ -5,16 +5,22 @@ require.config({
     
     paths: {
         angular: 'vendor/angular/angular',
+        ngAnimate: 'vendor/angular-animate/angular-animate',
         ngRoute: 'vendor/angular-route/angular-route',
         ngResource: 'vendor/angular-resource/angular-resource',
         ngStrap: 'vendor/angular-strap/dist/angular-strap',
-        ngStrapTpl: 'vendor/angular-strap/dist/angular-strap.tpl'
+        ngStrapTpl: 'vendor/angular-strap/dist/angular-strap.tpl',
+        underscore: 'vendor/underscore/underscore'
     },
     
     shim: {
         angular: {
             exports: 'angular'
         },
+        underscore: {
+            exports: '_'
+        },
+        ngAnimate: ['angular'],
         ngStrap: ['angular'],
         ngStrapTpl: ['ngStrap'],
         ngRoute: ['angular'],
@@ -23,6 +29,7 @@ require.config({
     
     deps: [
         'angular',
+        'ngAnimate',
         'ngRoute',
         'ngResource',
         'ngStrap',

@@ -10,7 +10,8 @@ define(function (require) {
         aircraftAttributesController = require('./controllers/aircraftAttributesController'),
         aircraftLogBookController = require('./controllers/aircraftLogBookController'),
         aircraftRoutingController = require('./controllers/aircraftRoutingController'),
-        
+        aircraftLogPageDetailController = require('./controllers/aircraftLogPageDetailController'),
+
         // Factories
         aircraftFactory = require('./models/aircraft'),
         logBookFactory = require('./models/logBook'),
@@ -24,6 +25,7 @@ define(function (require) {
       .controller('AircraftAttributesController', aircraftAttributesController)
       .controller('AircraftLogBookController', aircraftLogBookController)
       .controller('AircraftRoutingController', aircraftRoutingController)
+      .controller('AircraftLogPageDetailController', aircraftLogPageDetailController)
     
       // Register Factories
       .factory('aircraft', aircraftFactory)

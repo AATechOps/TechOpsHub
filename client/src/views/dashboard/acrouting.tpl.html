@@ -1,0 +1,34 @@
+<div class="col-md-12">
+    <h4 class="aa-heading" id="routing">
+        Aircraft Routing
+    </h4>
+</div>
+
+<div class="col-xs-12" data-ng-show="flights">
+    <ul class="col-xs-12 nav-horizontal">
+        <li data-ng-repeat="fl in flights | orderBy:'ArrivalTime'">
+            <div class="panel panel-default aa-flight-card">
+                <div class="panel-body">
+                    <h3>
+                        <small>Flight <span data-ng-bind="fl.FlightNumber"></span></small>
+                        <span data-ng-bind="fl.OrigStation"></span>&nbsp;&rarr;&nbsp;<span data-ng-bind="fl.DestStation"></span>
+                    </h3>
+                    <div class="row">
+                        <h5 class="col-xs-5">
+                            <small>SCH <span data-ng-bind="fl.ArrivalTime | date: 'hh:mm'"></span></small>
+                            <span data-ng-bind="fl.ArrivalTime | date: 'hh:mm'"></span>
+                        </h5>
+                        <h5 class="col-xs-3">
+                            <small>GATE</small>
+                            <span></span>
+                        </h5>
+                        <h5 class="col-xs-4">
+                            <small>GND</small>
+                            <span>00:00</span>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
